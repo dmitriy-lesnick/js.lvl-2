@@ -4,8 +4,8 @@ const fs = require('fs')
 
 const server = http.createServer((req, res) => {
     console.log(req.url)
-    const body = req.url === '/style.css'
-        ? fs.readFileSync('./public/style.css')
+    const body = req.url === '/styles.css'
+        ? fs.readFileSync('./public/styles.css')
         : fs.readFileSync('./public/index.html')
 
     res.end(body)
