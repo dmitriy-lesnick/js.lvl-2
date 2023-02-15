@@ -4,7 +4,7 @@ class List {
     constructor() {
         let goods = this.fetchGoods()
         goods = goods.map((cur) => {
-            return new GoodItem(cur)
+            return new GoodsItem(cur)
         })
         this.items.push(...goods)
         this.render()
@@ -28,7 +28,7 @@ class List {
 }
 
 
-class GoodItem {
+class GoodsItem {
     name = ''
     price = 0
 
