@@ -1,23 +1,24 @@
-/* class List {
+class List {
     items = []
 
     constructor() {
-        let goods = this.fetchGoods()
-        goods = goods.map((cur) => {
-            return new GoodsItem(cur)
+        let goodsPromise = this.fetchGoods()
+        goodsPromise.then(() => {
+            this.render()
         })
-        this.items.push(...goods)
-        this.render()
     }
 
     fetchGoods() {
         const result = fetch('./public/database.json')
-        result
-            .then()
-            .catch(err => {
-                console.warn('Check network', err)
+        return result
+            .then(res => {
+                return res.json()
             })
-
+            .then(data => {
+                this.items = data.data.map((cur) => {
+                    return new GoodsItem(cur)
+                })
+            })
     }
 
     render() {
@@ -51,17 +52,3 @@ class GoodsItem {
 const ListInstance = new List
 
 
- */
-
-function fetchGoods() {
-    const result = fetch('./public/database.json')
-    result
-        .then()
-        .catch(err => {
-            console.warn('Check network', err)
-        })
-
-}
-
-
-fetchGoods() 
