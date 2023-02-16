@@ -11,7 +11,7 @@ class List {
     }
 
     fetchGoods() {
-        const result = fetch('hhtp://localhost:3000/database.json')
+        const result = fetch('./public/database.json')
         result
             .then()
             .catch(err => {
