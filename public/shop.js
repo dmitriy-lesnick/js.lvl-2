@@ -9,7 +9,7 @@ class List {
     }
 
     fetchGoods() {
-        const result = fetch('./public/database.json')
+        const result = fetch('http://localhost:3000/database.json')
         return result
             .then(res => {
                 return res.json()
