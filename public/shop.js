@@ -11,12 +11,13 @@ class List {
     }
 
     fetchGoods() {
-        return [
-            { name: 'Shirt', price: 150 },
-            { name: 'Socks', price: 50 },
-            { name: 'Jacket', price: 250 },
-            { name: 'Shoes', price: 200 },
-        ]
+        const result = fetch('hhtp://localhost:3000/database.json')
+        result
+            .then()
+            .catch(err => {
+                console.warn('Check network', err)
+            })
+
     }
 
     render() {
@@ -48,3 +49,5 @@ class GoodsItem {
 }
 
 const ListInstance = new List
+
+
