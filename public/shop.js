@@ -9,16 +9,12 @@ class List {
     }
 
     fetchGoods() {
-        const result = fetch('http://localhost:3000/database.json')
-        return result
-            .then(res => {
-                return res.json()
-            })
-            .then(data => {
-                this.items = data.data.map((cur) => {
-                    return new GoodsItem(cur)
-                })
-            })
+        const result = fetch('./public/database.json')
+        const res = result
+        const data = res.json()
+        this.items = data.data.map((cur) => {
+            return new GoodsItem(cur)
+        })
     }
 
     render() {
