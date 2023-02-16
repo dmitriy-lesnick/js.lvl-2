@@ -1,4 +1,4 @@
-class List {
+/* class List {
     items = []
 
     constructor() {
@@ -51,3 +51,17 @@ class GoodsItem {
 const ListInstance = new List
 
 
+ */
+
+function fetchGoods() {
+    const result = fetch('./public/database.json')
+    result
+        .then()
+        .catch(err => {
+            console.warn('Check network', err)
+        })
+
+}
+
+
+fetchGoods() 
