@@ -48,20 +48,24 @@ class List extends AbstractList {
 }
 
 class Cart extends AbstractList {
+
     constructor() {
         super()
     }
 
     init() {
-        const block = document.createElement('div')
-        block.classList.add('cart')
-
-        const ButtonInstance = new Button('Корзина')
-
-
         const placeToRender = document.querySelector('header')
 
         if (placeToRender) {
+
+            const block = document.createElement('div')
+
+            block.classList.add('cart')
+
+            const ButtonInstance = new Button('Корзина')
+
+            block.appendChild(ButtonInstance.getTemplate())
+
             placeToRender.appendChild(block)
         }
     }
