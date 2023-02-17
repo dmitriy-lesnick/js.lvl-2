@@ -1,4 +1,4 @@
-/* let counter = 0 */
+let counter = 0
 
 const asyncPlus = () => {
     return new Promise((resolve, reject) => {
@@ -15,7 +15,7 @@ const asyncPlus = () => {
 
 }
 
-const print = () => {
+const print = (value) => {
     console.log(value)
 }
 

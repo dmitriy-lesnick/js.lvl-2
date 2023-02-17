@@ -1,7 +1,24 @@
-class List {
+class AbstractList {
     items = []
 
+    constructor(item = []) {
+        this.item = []
+    }
+
+    add() {
+        this.items.push()
+    }
+
+    remove() {
+
+    }
+}
+
+
+class List extends AbstractList {
+
     constructor() {
+        super()
         let goodsPromise = this.fetchGoods()
         goodsPromise.then(() => {
             this.render()
@@ -27,6 +44,24 @@ class List {
         })
     }
 
+
+}
+
+class Cart extends AbstractList {
+    constructor() {
+        super()
+    }
+
+    init() {
+        const block = document.createElement('div')
+        block.classList.add('cart')
+
+        const placeToRender = document.querySelector('header')
+
+        if (placeToRender) {
+            placeToRender.appendChild(block)
+        }
+    }
 }
 
 
@@ -50,5 +85,7 @@ class GoodsItem {
 }
 
 const ListInstance = new List
+
+const CartInstance = new Cart
 
 
