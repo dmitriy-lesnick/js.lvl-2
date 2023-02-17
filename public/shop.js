@@ -46,11 +46,7 @@ class List extends AbstractList {
 
 }
 
-class Cart/*  extends AbstractList  */ {
-
-    /* constructor() {
-        super()
-    } */
+class Cart {
 
     init() {
         const placeToRender = document.querySelector('header')
