@@ -10,9 +10,9 @@ class Button {
         return this._text
     }
 
-    set text(value) {
+    /* set text(value) {
         this._text = value
-    }
+    } */
 
     onBtnClick() {
         console.log('clicked')
