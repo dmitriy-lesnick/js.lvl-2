@@ -1,16 +1,16 @@
 class AbstractList {
     items = []
 
-    /*  constructor(item = []) {
-         this.item = []
-     }
- 
-     add() {
-         this.items.push()
-     }
- 
-     remove() {
-     } */
+    constructor(item = []) {
+        this.item = []
+    }
+
+    add() {
+        this.items.push()
+    }
+
+    remove() {
+    }
 }
 
 
@@ -46,7 +46,11 @@ class List extends AbstractList {
 
 }
 
-class Cart {
+class Cart extends AbstractList {
+
+    constructor() {
+        super()
+    }
 
     init() {
         const placeToRender = document.querySelector('header')
