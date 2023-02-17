@@ -73,6 +73,6 @@ const roundButton = new RoundButton('round btn')
 const btns = [alertButton, roundButton]
 
 btns.forEach(btn => {
-    btn.render()
+    btn._render()
 })
 
