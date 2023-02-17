@@ -1,8 +1,9 @@
 class Button {
     _text = ''
+
     constructor(text) {
         this._text = text
-        /* this.render() */
+        this._render()
     }
 
     get text() {
@@ -23,7 +24,7 @@ class Button {
         return btn
     }
 
-    render() {
+    _render() {
         const placeToRender = document.querySelector('.buttons')
         if (placeToRender) {
             const btn = this.getTemplate()
