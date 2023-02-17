@@ -56,6 +56,10 @@ class Cart extends AbstractList {
         const block = document.createElement('div')
         block.classList.add('cart')
 
+        /* const ButtonInstance = new Button('Корзина') */
+
+
+
 
         const placeToRender = document.querySelector('header')
 

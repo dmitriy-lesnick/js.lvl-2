@@ -37,7 +37,7 @@ class Button {
     }
 }
 
-class AlertButton extends Button {
+/* class AlertButton extends Button {
     constructor(text) {
         super(text)
     }
@@ -62,11 +62,11 @@ class RoundButton extends Button {
         console.log('round clicked')
     }
 
-}
+} */
 
 new Button('Click me')
 
-const alertButton = new AlertButton('AlERT click')
+/* const alertButton = new AlertButton('AlERT click')
 
 const roundButton = new RoundButton('round btn')
 
@@ -75,4 +75,4 @@ const btns = [alertButton, roundButton]
 btns.forEach(btn => {
     btn._render()
 })
-
+ */
