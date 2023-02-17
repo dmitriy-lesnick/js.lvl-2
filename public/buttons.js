@@ -64,7 +64,7 @@ class RoundButton extends Button {
 
 } */
 
-new Button('Click me')
+
 
 /* const alertButton = new AlertButton('AlERT click')
 
