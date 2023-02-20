@@ -1,20 +1,26 @@
 class Button {
     _text = ''
+    _onclickClb = null
 
-    constructor(text) {
+    constructor(text, clb) {
         this._text = text
+        this._onclickClb = clb
+
     }
 
     get text() {
         return this._text
     }
 
-    /* set text(value) {
+    set text(value) {
         this._text = value
-    } */
+    }
 
     onBtnClick() {
         console.log('clicked')
+        if (typeof this._onclickClb === 'function') {
+            this._onclickClb()
+        }
     }
 
     getMainTemplate() {
