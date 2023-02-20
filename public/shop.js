@@ -46,31 +46,32 @@ class List extends AbstractList {
 
 }
 
-const placeToRender = document.querySelector('header')
 
-if (placeToRender) {
 
-    const block = document.createElement('div')
-
-    block.classList.add('cart')
-
-    const ButtonInstance = new Button('Корзина')
-
-    block.appendChild(ButtonInstance.getTemplate())
-
-    placeToRender.appendChild(block)
-}
-
-/* class Cart extends AbstractList {
+class Cart extends AbstractList {
 
     constructor() {
         super()
     }
 
     init() {
-        
+        const placeToRender = document.querySelector('header')
+
+        if (placeToRender) {
+
+            const block = document.createElement('div')
+
+            block.classList.add('cart')
+
+            const ButtonInstance = new Button('Корзина')
+
+            block.appendChild(ButtonInstance.getTemplate())
+
+            placeToRender.appendChild(block)
+        }
+
     }
-} */
+}
 
 
 class GoodsItem {
