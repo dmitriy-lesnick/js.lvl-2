@@ -52,7 +52,7 @@ class Cart extends AbstractList {
 
     constructor() {
         super()
-        this.init
+        this.init()
     }
 
     init() {
