@@ -62,10 +62,16 @@ class Cart extends AbstractList {
 
             const block = document.createElement('div')
 
+            const list = document.createElement('div')
+
+            list.classList.add('cart_list')
+
             block.classList.add('cart')
 
+            block.appendChild(list)
+
             const ButtonInstance = new Button('Корзина', () => {
-                console.log('Cart opened!')
+                list.classList.toggle('shown')
             })
 
             block.appendChild(ButtonInstance.getTemplate())
