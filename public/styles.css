@@ -6,6 +6,9 @@
 header {
     background: #000;
     color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .round {
@@ -25,4 +28,15 @@ header {
 
 .cart_list.shown {
     display: block;
+}
+
+.goods-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.goods-item {
+    background: #eee;
+    padding: 20px;
 }

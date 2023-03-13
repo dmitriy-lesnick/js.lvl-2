@@ -96,7 +96,24 @@ class GoodsItem {
         const placeToRender = document.querySelector('.goods-list')
         if (placeToRender) {
             const block = document.createElement('div')
-            block.innerText = `Товар: ${this.name} = ${this.price}`
+            block.classList.add('goods-item')
+            block.innerHTML = `
+            <div class='img'>
+            <img src=""
+            </div>
+            <div class='meta'>
+            <div class='meta__row'>
+            <span class ="key">Товар:</span>
+            <span class ="value">${this.name}</span>
+            </div>
+            <div class='meta__row'>
+            <span class ="key">Цена:</span>
+            <span class ="value">${this.price}</span>
+            </div>
+            </div>
+            `
+
+
             placeToRender.appendChild(block)
         }
     }
