@@ -99,7 +99,7 @@ class GoodsItem {
             block.classList.add('goods-item')
             block.innerHTML = `
             <div class='img'>
-            <img src=""
+            <img src="img/woocommerce-placeholder.png">
             </div>
             <div class='meta'>
             <div class='meta__row'>
