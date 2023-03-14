@@ -15,9 +15,10 @@ class AbstractList {
 
 
 class List extends AbstractList {
-
-    constructor() {
+    _cartInstance = null
+    constructor(CartInstance) {
         super()
+        this._cartInstance = CartInstance
         let goodsPromise = this.fetchGoods()
         goodsPromise.then(() => {
             this.render()
@@ -32,7 +33,7 @@ class List extends AbstractList {
             })
             .then(data => {
                 this.items = data.data.map((cur) => {
-                    return new GoodsItem(cur)
+                    return new GoodsItem(cur, this._cartInstance)
                 })
             })
     }
@@ -86,10 +87,12 @@ class Cart extends AbstractList {
 class GoodsItem {
     name = ''
     price = 0
+    _cartInstance = null
 
-    constructor({ name, price }) {
+    constructor({ name, price, }, { CartInstance }) {
         this.name = name
         this.price = price
+        this._cartInstance = CartInstance
     }
 
     render() {
@@ -110,17 +113,24 @@ class GoodsItem {
             <span class ="key">Цена:</span>
             <span class ="value">${this.price}</span>
             </div>
+            <div class="btn_holder">
+            </div>
             </div>
             `
-
-
             placeToRender.appendChild(block)
+
+            const AddButton = new Button('Добавить в корзину')
+
+            block.querySelector('.btn_holder').appendChild(AddButton.getTemplate(), () => {
+                this._cartInstance.add(this)
+            })
+
         }
     }
 }
 
-const ListInstance = new List
+const ListInstance = new List(CartInstance)
 
-const CartInstance = new Cart
+const CartInstance = new Cart()
 
 
