@@ -1,0 +1,21 @@
+{
+  "name": "js.lvl-2",
+  "version": "1.0.0",
+  "description": "Lessons",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriy-lesnick/js.lvl-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriy-lesnick/js.lvl-2/issues"
+  },
+  "homepage": "https://github.com/dmitriy-lesnick/js.lvl-2#readme"
+}
